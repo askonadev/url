@@ -2,7 +2,7 @@
     "name": "askonadev/url",
     "autoload": {
         "psr-4": {
-            "Askonadev\\Url\\": "src/"
+            "Askonadev\\": "src/"
         }
     },
     "authors": [],
