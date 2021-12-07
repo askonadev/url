@@ -47,7 +47,7 @@ class Url
     public function parseQuery(string $sQuery)
     {
         $data = preg_replace_callback(
-            '/(?:^|(?<=&))[^=[]+/',
+            "/(?:^|(?<=&))[^=[]+/",
             function($match)
             {
                 return bin2hex(urldecode($match[0]));
@@ -57,7 +57,7 @@ class Url
     
         parse_str($data, $values);
     
-        foreach (array_combine(array_map('hex2bin', array_keys($values)), $values) as $sKey => $arValue) {
+        foreach (array_combine(array_map("hex2bin", array_keys($values)), $values) as $sKey => $arValue) {
             $this->addParam($sKey, $arValue);
         }
     }
