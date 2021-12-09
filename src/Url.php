@@ -3,9 +3,9 @@ namespace Askonadev;
 
 class Url
 {
-    private string $scheme;
-    private string $host;
-    private string $fragment;
+    private string $scheme = "";
+    private string $host = "";
+    private string $fragment = "";
     private array $arParams = [];
     private array $arPathItems = [];
     
