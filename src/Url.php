@@ -69,7 +69,7 @@ class Url
     
     public function setScheme(string $scheme): void
     {
-        $this->scheme = $scheme;
+        $this->scheme = str_replace("/", "", $scheme);
     }
     
     public function getScheme(): string
@@ -79,7 +79,7 @@ class Url
     
     public function setHost(string $host): void
     {
-        $this->host = $host;
+        $this->host = str_replace("/", "", $host);
     }
     
     public function getHost(): string
